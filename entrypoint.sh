@@ -2,22 +2,20 @@
 # Used to write scripts to command-line
 
 #!/bin/bash
-echo "==========================="
 
-# Getting the name and email of the user 
+echo "========================="
+
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global user.email "${INPUT_EMAIL}"
+git config --global --add safe.directory /github/workspace
 
-# Adding to the safelist of directories
-git config --global --add safe.derectory /github/workspace
+# python3 /usr/bin/feed.py
+/venv/bin/python /usr/bin/feed.py
 
-python3 /usr/bin/feed.py
-
-git add .
-git commit -m "Update feed"
+git add -A && git commit -m "update feed"
 git push --set-upstream origin main
 
-echo "==========================="
+echo "========================="
 
 # We need to give permission to entrypoint.sh
 # Run in terminal
