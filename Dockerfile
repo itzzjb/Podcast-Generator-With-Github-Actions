@@ -1,6 +1,6 @@
 # Controls how the cloud server spinups a container in a VM
 
-FROM ubuntu-latest
+FROM ubuntu:latest
 
 RUN apt-get update && apt-get install -y \
     python3.10 \
