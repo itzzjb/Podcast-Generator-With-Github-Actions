@@ -1,0 +1,32 @@
+# This action will be run by another repository by another user
+
+name: "Podcast Generator"
+author: "Januda Bethmin"
+run-name: "Podcast Generator"
+description: "Generates a feed for a poscast from a YAML file"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding: 
+  icon: "git-branch"
+  color: "red"
+
+inputs: 
+  email: 
+    description: The commiter's email address
+    required: true
+    default: ${{ github.actor }}@localhost
+  name: 
+    description: The commiter's name
+    required: true
+    default: ${{ github.actor }}
+
+# When we use the action from another repository
+# Goes to action.yaml
+# Sees that it requires the docker image 
+# Using the docker image a docker container will spin up in the cloud
+# After configuring the server (container) it runs the entrypoint.sh at the end.
+
+
