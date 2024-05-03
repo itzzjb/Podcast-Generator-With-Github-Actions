@@ -14,6 +14,12 @@ git push --set-upstream origin main
 
 echo "========================="
 
+# This will be called from the container which is running the docker image
+# Used to write scripts to command-line
+# We need to give permission to entrypoint.sh
+# Run in terminal
+# chmod -R 775 entrypoint.sh
+
 
 
 
