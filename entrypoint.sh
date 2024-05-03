@@ -19,6 +19,9 @@ git push --set-upstream origin main
 
 echo "==========================="
 
+# We need to give permission to entrypoint.sh
+# Run in terminal
+# chmod -R 775 entrypoint.sh
 
 
 
