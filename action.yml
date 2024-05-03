@@ -1,7 +1,7 @@
 # This action will be run by another repository by another user
 
 name: "Podcast Generator"
-author: "Ray Villalobos"
+author: "Januda Bethmin"
 description: "Generates a feed for a podcast from a YAML file"
 runs:
   using: "docker"
