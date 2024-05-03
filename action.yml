@@ -1,6 +1,6 @@
 # This action will be run by another repository by another user
 
-name: "Podcast RSS Generator"
+name: "YAML TO XML Generator For Podcasts"
 author: "Januda Bethmin"
 description: "Generates a feed for a podcast from a YAML file"
 runs:
